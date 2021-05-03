@@ -4,7 +4,6 @@ export default class SceneGameOver extends Phaser.Scene {
     }
   
     preload() {
-      this.load.image('ship', '../../assets/playerShip1_green.png');
     }
   
     create() {}
