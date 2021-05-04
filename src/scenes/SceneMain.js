@@ -8,7 +8,7 @@ export default class SceneMain extends Phaser.Scene {
   }
 
   preload() {
-    this.load.image('background', 'darkPurple.png');
+    this.load.image('bg', 'newBg.png');
     this.load.image('enemy', 'enemyBlack2.png');
     this.load.image('laser', 'laserGreen03.png');
     this.load.image('myLaser', 'laserRed03.png');
@@ -44,7 +44,7 @@ export default class SceneMain extends Phaser.Scene {
     this.backgrounds = [];
     for (let i = 0; i < 5; i++) {
       // create five scrolling backgrounds
-      const bg = new ScrollingBackground(this, 'background', i * 10);
+      const bg = new ScrollingBackground(this, 'bg', i * 10);
       this.backgrounds.push(bg);
     }
 
@@ -222,6 +222,7 @@ export default class SceneMain extends Phaser.Scene {
         }
       }
     }
+    this.backgrounds.forEach(bg => bg.update());
   }
 
   getEnemiesByType(type) {
