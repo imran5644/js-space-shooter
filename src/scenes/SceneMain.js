@@ -17,10 +17,15 @@ export default class SceneMain extends Phaser.Scene {
       frameWidth: 99,
       frameHeight: 70,
     });
+    this.load.audio('drums', 'drums.ogg');
+    this.load.audio('explosion', 'explosion.mp3');
   }
 
   create() {
-    // this.add.image(250, 300, 'background').setScale(3);
+    let sfx = this.sound.add('drums');
+    let explosionSound = this.sound.add('explosion');
+    sfx.play();
+
     this.anims.create({
       key: 'left',
       frames: [{ key: 'ship', frame: 0 }],
@@ -123,6 +128,7 @@ export default class SceneMain extends Phaser.Scene {
         if (!player.getData('isDead') && !enemy.getData('isDead')) {
           player.explode(false);
           enemy.explode(true);
+          explosionSound.play();
         }
       },
     );
@@ -134,6 +140,7 @@ export default class SceneMain extends Phaser.Scene {
         if (!player.getData('isDead') && !laser.getData('isDead')) {
           player.explode(false);
           laser.destroy();
+          explosionSound.play();
         }
       },
     );
