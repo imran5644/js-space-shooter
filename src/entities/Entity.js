@@ -13,7 +13,6 @@ export default class Entity extends Phaser.Physics.Arcade.Sprite {
 
     explode(canDestroy) {
       if (!this.getData('isDead')) {
-  
         if (this.shootTimer !== undefined) {
           if (this.shootTimer) {
             this.shootTimer.remove(false);
