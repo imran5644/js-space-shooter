@@ -1,4 +1,5 @@
 import ScrollingBackground from '../background/ScrollingBackground';
+const myDiv = document.querySelector('.textDiv');
 
 export default class SceneMainMenu extends Phaser.Scene {
   constructor() {
@@ -13,7 +14,6 @@ export default class SceneMainMenu extends Phaser.Scene {
   }
 
   create() {
-    this.game.input = 'Hello';
     const playBtnSound = this.sound.add('btnAudio');
     this.btnPlay = this.add.sprite(
       this.game.config.width * 0.5,
@@ -40,6 +40,7 @@ export default class SceneMainMenu extends Phaser.Scene {
       function () {
         playBtnSound.play();
         setTimeout(() => {
+          myDiv.innerHTML = '';
           this.scene.start('SceneMain');
         }, 2000);
       },
