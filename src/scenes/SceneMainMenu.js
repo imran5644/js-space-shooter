@@ -13,6 +13,7 @@ export default class SceneMainMenu extends Phaser.Scene {
   }
 
   create() {
+    this.game.input = 'Hello';
     const playBtnSound = this.sound.add('btnAudio');
     this.btnPlay = this.add.sprite(
       this.game.config.width * 0.5,
