@@ -1,4 +1,5 @@
 import Entity from './Entity';
+import Phaser from 'phaser';
 
 export default class ChaserShip extends Entity {
   constructor(scene, x, y) {
@@ -31,7 +32,7 @@ export default class ChaserShip extends Entity {
         this.angle += 5;
       }
 
-      if (this.state == this.states.CHASE) {
+      if (this.state === this.states.CHASE) {
         const dx = this.scene.player.x - this.x;
         const dy = this.scene.player.y - this.y;
 

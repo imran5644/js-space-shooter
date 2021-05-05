@@ -1,4 +1,4 @@
-import 'phaser';
+import Phaser from 'phaser';
 import SceneMainMenu from './scenes/SceneMainMenu';
 import SceneMain from './scenes/SceneMain';
 import SceneGameOver from './scenes/SceneGameOver';
@@ -19,4 +19,5 @@ const config = {
   roundPixels: true,
 };
 
-new Phaser.Game(config);
+const game = () => new Phaser.Game(config);
+game();
