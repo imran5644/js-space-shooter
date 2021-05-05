@@ -24,11 +24,13 @@
     "babel-loader": "^8.2.2",
     "babel-polyfill": "^6.26.0",
     "copy-webpack-plugin": "^8.1.1",
+    "dotenv-webpack": "^7.0.2",
     "webpack": "^5.36.2",
     "webpack-cli": "^4.6.0",
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
+    "dotenv": "^9.0.0",
     "phaser": "^3.54.0"
   }
 }
