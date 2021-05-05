@@ -1,13 +1,18 @@
 import Phaser from 'phaser';
 import ScrollingBackground from '../background/ScrollingBackground';
 
-const url = `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${process.env.GAMEID}/scores`;
+const url = `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${process.env.GAMEID}/scores/`;
 const leaderboardDiv = document.querySelector('.leaderboard');
 
 const sortScore = data => {
+  let count = 0;
   const sortedArray = data.sort((a, b) => b.score - a.score);
-  for (let i = 0; i < 5; i += 1) {
-    leaderboardDiv.innerHTML += `<li>${sortedArray[i].user}: ${sortedArray[i].score}</li>`;
+  for (let points of sortedArray) {
+    leaderboardDiv.innerHTML += `<li>${points.user}: ${points.score}</li>`;
+    count++;
+    if(count === 5){
+      break;
+    }
   }
 };
 

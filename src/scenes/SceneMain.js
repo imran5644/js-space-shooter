@@ -7,7 +7,7 @@ import ScrollingBackground from '../background/ScrollingBackground';
 
 const inputField = document.querySelector('#utext');
 const scoreDiv = document.querySelector('.scoreDiv');
-const url = `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${process.env.GAMEID}/scores`;
+const url = `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${process.env.GAMEID}/scores/`;
 
 const setScore = async (name, score) => {
   const params = { user: name, score };
