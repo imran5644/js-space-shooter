@@ -31,7 +31,7 @@ Use the arrows of your keyboard to move the ship around the space, and Space Bar
 
 ## Live Demo
 
-[Live Demo](https:imran-game.herokuapp.com)
+[Live Demo](https://deploy-preview-1--hungry-brahmagupta-68b2f1.netlify.app/)
 
 ## Getting Started
 
