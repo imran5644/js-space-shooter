@@ -31,7 +31,7 @@ Use the arrows of your keyboard to move the ship around the space, and Space Bar
 
 ## Live Demo
 
-[Live Demo](https:imran-game.herokuapp.com)
+[Live Demo](https://imran-game.herokuapp.com/)
 
 ## Getting Started
 
