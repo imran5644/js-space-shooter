@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --watch",
     "start": "webpack",
     "build": "webpack serve",
     "watch": "webpack --watch"
@@ -19,6 +19,12 @@
     "url": "https://github.com/imran5644/js-space-shooter/issues"
   },
   "homepage": "https://github.com/imran5644/js-space-shooter#readme",
+  "jest": {
+    "setupFiles": [
+      "./setupTests.js",
+      "jest-canvas-mock"
+    ]
+  },
   "devDependencies": {
     "@babel/core": "^7.14.0",
     "@babel/preset-env": "^7.14.0",
@@ -26,11 +32,14 @@
     "babel-polyfill": "^6.26.0",
     "copy-webpack-plugin": "^8.1.1",
     "dotenv-webpack": "^7.0.2",
+    "jest": "^26.6.3",
+    "jest-canvas-mock": "^2.3.1",
     "webpack": "^5.36.2",
     "webpack-cli": "^4.6.0",
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
-    "phaser": "^3.54.0"
+    "phaser": "^3.54.0",
+    "regenerator-runtime": "^0.13.7"
   }
 }
