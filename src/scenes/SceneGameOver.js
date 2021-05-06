@@ -4,7 +4,6 @@ import sortResult from '../utils/sortResult';
 
 const leaderboardDiv = document.querySelector('.leaderboard');
 
-
 const printScore = () => {
   sortResult().then(value => {
     if (typeof value === 'object') {

@@ -1,6 +1,6 @@
+import Phaser from 'phaser';
 import Entity from './Entity';
 import EnemyLaser from './EnemyLaser';
-import Phaser from 'phaser';
 
 export default class GunShip extends Entity {
   constructor(scene, x, y) {
@@ -18,7 +18,7 @@ export default class GunShip extends Entity {
     });
     this.play('enemy');
   }
-  
+
   onDestroy() {
     if (this.shootTimer !== undefined) {
       if (this.shootTimer) {

@@ -59,7 +59,7 @@ export default class SceneMainMenu extends Phaser.Scene {
         }, 2000);
       }
     });
-    
+
     this.title = this.add.text(
       this.game.config.width * 0.5,
       128,
