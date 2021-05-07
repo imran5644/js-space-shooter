@@ -61,7 +61,7 @@ Compile the code by typing the following command in your terminal (Make sure you
   npm run build
 ```
 
-Now open up VSCode and open the project folder. (Make sure you install Liver Server Extension in VSCode.) Right-click `index.html` which is inside the `dist` folder and click on `Open With Live Server`.
+Now open up VSCode and open the project folder. (Make sure you install Liver Server Extension in VSCode.) Right-click `index.html` which is inside the `Dist folder and click on `Open With Live Server`.
 
 **Note:** You may not get the leaderboard on your local machine because you don't have access to the Game Id to correctly fetch the API.
 
@@ -73,7 +73,7 @@ Now open up VSCode and open the project folder. (Make sure you install Liver Ser
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!
+Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](https://github.com/imran5644/space-shooter/issues).
 
