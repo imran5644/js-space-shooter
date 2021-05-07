@@ -35,7 +35,10 @@
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",
     "stylelint-csstree-validator": "^1.9.0",
-    "stylelint-scss": "^3.19.0"
+    "stylelint-scss": "^3.19.0",
+    "webpack": "^5.36.2",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
     "@babel/core": "^7.14.0",
@@ -46,9 +49,6 @@
     "copy-webpack-plugin": "^8.1.1",
     "dotenv-webpack": "^7.0.2",
     "phaser": "^3.54.0",
-    "regenerator-runtime": "^0.13.7",
-    "webpack": "^5.36.2",
-    "webpack-cli": "^4.7.0",
-    "webpack-dev-server": "^3.11.2"
+    "regenerator-runtime": "^0.13.7"
   }
 }

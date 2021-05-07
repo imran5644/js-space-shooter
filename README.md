@@ -1,6 +1,9 @@
 <h1 align='center'>Space Shooter</h1>
 
-> Space Shooter is a simple game built with Phaser 3 and JavaScript.
+>Shooter Game is a game that uses Phaser library to manipulate the player and enemies' movements and shoots. We can create different scenes, obstacles and logic for our enemies. This project uses Async, await to make calls to the LeaderBoard API, where name and scores are kept. I used Javascript, LeaderBoard API, Phaser 3, and Jest.
+
+ ## Day 2 of developing the game
+ The main idea when I started the project was to create a game where the player could defeat enemies. These enemies should shoot the player and strike with the player to kill him. The enemies should have basic movements and not be static images. Player can also move to any direction to protect himself and to kill enemies.
 
 ![screenshot](./assets/screenshot.jpg)
 
