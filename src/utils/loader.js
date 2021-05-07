@@ -7,4 +7,4 @@ const loadBody = () => {
   });
 };
 
-module.exports = loadBody;
+export { loadBody };

@@ -13,3 +13,4 @@ const fetchAPI = async () => {
 };
 
 module.exports = fetchAPI;
+export { fetchAPI };
