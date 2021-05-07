@@ -12,5 +12,4 @@ const fetchAPI = async () => {
   return data.result;
 };
 
-module.exports = fetchAPI;
 export { fetchAPI };
