@@ -166,11 +166,7 @@ export default class SceneMain extends Phaser.Scene {
           enemy.explode(true);
           explosionSound.play();
           sfx.stop();
-          try {
           setScore(this.player.name, this.player.score);
-          }catch(error){
-            console.log(error);
-          }
           setTimeout(() => {
             this.scene.start('SceneGameOver');
           }, 1000);
@@ -187,11 +183,7 @@ export default class SceneMain extends Phaser.Scene {
           laser.destroy();
           explosionSound.play();
           sfx.stop();
-          try {
           setScore(this.player.name, this.player.score);
-          }catch(error) {
-          console.log(error);
-          }
           setTimeout(() => {
             this.scene.start('SceneGameOver');
           }, 1000);
