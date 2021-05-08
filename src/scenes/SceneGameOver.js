@@ -6,21 +6,19 @@ const leaderboardDiv = document.querySelector('.leaderboard');
 
 const printScore = () => {
   try {
-  sortResult().then(value => {
-    if (typeof value === 'object') {
-      for (let i = 0; i < 5; i += 1) {
-        leaderboardDiv.innerHTML += `<li>${value[i].user}: ${value[i].score}</li>`;
+    sortResult().then(value => {
+      if (typeof value === 'object') {
+        for (let i = 0; i < 5; i += 1) {
+          leaderboardDiv.innerHTML += `<li>${value[i].user}: ${value[i].score}</li>`;
+        }
+      } else {
+        leaderboardDiv.innerHTML = value;
       }
-    } else {
-      leaderboardDiv.innerHTML = value;
-    }
-  });
-}
-catch(error) {
-  leaderboardDiv.innerHTML = 'Error occured try again later';
-}
+    });
+  } catch (error) {
+    leaderboardDiv.innerHTML = 'Error occured try again later';
+  }
 };
-
 
 export default class SceneGameOver extends Phaser.Scene {
   constructor() {

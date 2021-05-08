@@ -1,3 +1,4 @@
+import Phaser from 'phaser';
 import SceneMainMenu from '../src/scenes/SceneMainMenu';
 
 test('should be type of a function', () => {
