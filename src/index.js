@@ -4,7 +4,7 @@ import SceneMain from './scenes/SceneMain';
 import SceneGameOver from './scenes/SceneGameOver';
 import PreloadScene from './scenes/PreloadScene';
 
-const config = {
+export const config = {
   type: Phaser.AUTO,
   width: 480,
   height: 640,
@@ -19,5 +19,5 @@ const config = {
   roundPixels: true,
 };
 
-const game = () => new Phaser.Game(config);
+export const game = () => new Phaser.Game(config);
 game();

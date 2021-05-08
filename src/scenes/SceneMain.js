@@ -9,16 +9,20 @@ const inputField = document.querySelector('#utext');
 const scoreDiv = document.querySelector('.scoreDiv');
 const url = `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${process.env.GAMEID}/scores/`;
 
-const setScore = async (name, score) => {
+const setScore =  (name, score) => {
   const params = { user: name, score };
-  await fetch(url, {
+  if (params.user !== '' && params.score > 0){
+    fetch(url, {
     method: 'POST',
     mode: 'cors',
     headers: {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(params),
+  }).catch((error) => {
+  return error;
   });
+}
 };
 
 export default class SceneMain extends Phaser.Scene {
@@ -162,7 +166,11 @@ export default class SceneMain extends Phaser.Scene {
           enemy.explode(true);
           explosionSound.play();
           sfx.stop();
+          try {
           setScore(this.player.name, this.player.score);
+          }catch(error){
+            console.log(error);
+          }
           setTimeout(() => {
             this.scene.start('SceneGameOver');
           }, 1000);
@@ -179,7 +187,11 @@ export default class SceneMain extends Phaser.Scene {
           laser.destroy();
           explosionSound.play();
           sfx.stop();
+          try {
           setScore(this.player.name, this.player.score);
+          }catch(error) {
+          console.log(error);
+          }
           setTimeout(() => {
             this.scene.start('SceneGameOver');
           }, 1000);

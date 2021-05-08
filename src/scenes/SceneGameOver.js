@@ -5,6 +5,7 @@ import sortResult from '../utils/sortResult';
 const leaderboardDiv = document.querySelector('.leaderboard');
 
 const printScore = () => {
+  try {
   sortResult().then(value => {
     if (typeof value === 'object') {
       for (let i = 0; i < 5; i += 1) {
@@ -14,7 +15,12 @@ const printScore = () => {
       leaderboardDiv.innerHTML = value;
     }
   });
+}
+catch(error) {
+  leaderboardDiv.innerHTML = 'Error occured try again later';
+}
 };
+
 
 export default class SceneGameOver extends Phaser.Scene {
   constructor() {

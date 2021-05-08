@@ -4,4 +4,4 @@ const refreshLeaderBoard = () => Promise.resolve([
   { user: 'Muhib', score: 20 },
 ]);
 
-export { refreshLeaderBoard };
+export default refreshLeaderBoard;

@@ -7,4 +7,4 @@ const loadBody = () => {
   });
 };
 
-export { loadBody };
+export default loadBody;
